@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  server:
+    build: ./docker
+    ports:
+      - '8081:443'
+    volumes:
+      - ./docker/nginx/ssl.conf:/etc/nginx/conf.d/ssl.conf
+      - ./:/var/www/html
